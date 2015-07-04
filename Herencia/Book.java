@@ -1,0 +1,19 @@
+public class Book extends Encyclopedia{
+
+	String title;
+	String author;
+	int pages;
+	
+	public Book(){}
+
+	public Book(String [] array){
+		super (array);
+		title=array[3];
+		author=array[4];
+		pages=Integer.parseInt(array[5]);
+	}
+	
+	public String getData(){
+		return String.format("Title: %s \nAuthor: %s",title,author + getEncyclopedia() + "\nPages: " + pages);
+	}
+}
